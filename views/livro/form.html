@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css"/>
+	
+    <title>Cadastro de Livro</title>
+</head>
+
+	<body>
+		<div class="logo">
+			<a href="/inicio"><img src="../imagens/ifrsicone.png" width="110" height="30" class="d" alt="" margin="15"></a>
+	
+		</div>
+		<nav>
+			<ul>
+			
+				<li><a href="/alunos">Alunos</a></li>
+				<li><a href="/livros">Livros</a></li>
+				<li><a href="/emprestimos">Empréstimos</a></li>
+				<li><a href="/editoras">Editoras</a></li>
+				<li><a href="/autores">Autores</a></li>
+				<li><a href="/sair">Sair</a></li>
+			
+			</ul>  
+		</nav>
+		<div class="container"> 
+			<div class="container-cadastro-livro"> <!-- estilo da página de cadastro -->
+	
+				<div class="wrap-cadastro-livro"> <!-- estilo do formulário de cadastro-->
+					<form action="/salvarLivro" method="post">
+						<legend class="title-cadastro-form">Cadastre um Livro</legend><br>
+							
+						<div class="wrap-input margin-top-35 margin-bottom-35">
+							<input class="input-form-cadastro" type="text" name="tituloobra" id="tituloobra" autocomplete="off"/>
+							<span class="focus-input-form-cadastro" data-placeholder="Título"></span>
+						</div>
+				
+						<div class="wrap-input margin-top-35 margin-bottom-35">
+							<input class="input-form-cadastro" type="text" name="idioma" id="idioma" autocomplete="off"/>
+							<span class="focus-input-form-cadastro" data-placeholder="Idioma"></span>
+						</div>   
+						
+						<div class="wrap-input margin-top-35 margin-bottom-35">
+						<label for="classificacao">Classificação</label>
+						<select class="select-form-cadastro"  name="classificacao" id="classificacao" data-placeholder="classificacao">
+							<option value="t1">Livros científicos</option>
+							<option value="t2">Periódicos científicos</option>
+							<option value="t3">Periódicos informativos</option>
+							<option value="t4">Periódicos de entretenimento</option>
+							<option value="t5">Livros de literatura</option>
+							<option value="t6">Outro</option>
+						</select>						
+						</div>
+
+						
+                        <div class="wrap-input margin-top-35 margin-bottom-35">
+                            <input class="input-form-cadastro" type="text" name="autorobra" id="autorobra" autocomplete="off"/>
+                            <span class="focus-input-form-cadastro" data-placeholder="Autor"></span>
+                        </div>
+						
+                        <div class="wrap-input margin-top-35 margin-bottom-35">
+							<input class="input-form-cadastro" type="text" name="editora" id="editora" autocomplete="off"/>
+							<span class="focus-input-form-cadastro" data-placeholder="Editora"></span>
+						</div>
+					
+						
+						<div class="wrap-input margin-top-35 margin-bottom-35">
+                            <label for="tipomidia">Tipo de Mídia</label>
+                            <select class="select-form-cadastro"  name="tipomidia" id="tipomidia" data-placeholder="tipomidia">
+                                <option value="m1">Impressa</option>
+                                <option value="m2">DVD</option>
+                                <option value="m3">CD</option>
+                                <option value="m4">Online</option>
+                                <option value="m5">Outro</option>
+                              </select>
+                        </div>
+
+						<div class="container-cadastro-form-btn">
+							<input class="cadastro-livro-form-btn" type="submit" name="salvar" value="Salvar">
+							<input class="cadastro-livro-form-btn" type="reset" name="limpar" value="Limpar">
+						</div>
+					</form>
+					
+				</div>
+				<img src="../imagens/images_livro/img.png" width="500" height="500" class="margin-left-50" />
+			</div>
+		</div>
+	</body>
+	<script>
+		let inputs = document.getElementsByClassName('input-form-cadastro');
+		for (let input of inputs) {
+			input.addEventListener("blur", function() {
+				if(input.value.trim() != ""){
+					input.classList.add("has-val");
+				} else {
+					input.classList.remove("has-val");
+				}
+			});
+		}
+	</script>
+	
+	<footer>
+
+	</footer>
+	</html>
+

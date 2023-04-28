@@ -1,0 +1,90 @@
+
+<%- include('../menus/menu_admin.html'); %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css"/>
+	
+    <title>Cadastro de Livro</title>
+</head>
+
+	
+		<div class="container"> 
+			<div class="container-cadastro-livro"> <!-- estilo da página de cadastro -->
+	
+				<div class="wrap-cadastro-livro"> <!-- estilo do formulário de cadastro-->
+					<form action="/atualizarLivro" method="post">
+						<legend class="title-cadastro-form">Atualize um Livro</legend><br>
+						<input class="input-form-cadastro" type="hidden" name="idlivros" value="<%= livros[0].idlivros %>" id="idlivros"/>
+					
+						<div class="wrap-input margin-top-35 margin-bottom-35">
+							<label for="tituloobra">Título</label>
+							<input class="input-form-cadastro" type="text" name="tituloobra" value="<%= livros[0].tituloobra %>" id="tituloobra" autocomplete="off"/>
+							
+						</div>
+				
+						<div class="wrap-input margin-top-35 margin-bottom-35">
+							<label for="idioma">Idioma</label>
+							<input class="input-form-cadastro" type="text" name="idioma" value="<%= livros[0].idioma %>" id="idioma" autocomplete="off"/>
+							
+						</div>   
+						
+						<div class="wrap-input margin-top-35 margin-bottom-35">
+						<label for="classificacao">Classificação</label>
+						<select class="select-form-cadastro"  name="classificacao" id="classificacao" value="<%= livros[0].classificacao %>" data-placeholder="classificacao">
+							<option value="t1">Livros científicos</option>
+							<option value="t2">Periódicos científicos</option>
+							<option value="t3">Periódicos informativos</option>
+							<option value="t4">Periódicos de entretenimento</option>
+							<option value="t5">Livros de literatura</option>
+							<option value="t6">Outro</option>
+						</select>						
+						</div>
+
+						
+                        <div class="wrap-input margin-top-35 margin-bottom-35">
+							<label for="autor">Autor</label>
+                            <input class="input-form-cadastro" type="text" name="autorobra" value="<%= livros[0].autorobra %>"  id="autorobra" autocomplete="off"/>
+                           
+                        </div>
+						
+                        <div class="wrap-input margin-top-35 margin-bottom-35">
+							<label for="editora">Editora</label>
+							<input class="input-form-cadastro" type="text" name="editora" value="<%= livros[0].editora %>" id="editora" autocomplete="off"/>
+							
+						</div>
+					
+						
+						<div class="wrap-input margin-top-35 margin-bottom-35">
+                            <label for="tipomidia">Tipo de Mídia</label>
+                            <select class="select-form-cadastro"  name="tipomidia" value="<%= livros[0].tipomidia %>" id="tipomidia" data-placeholder="tipomidia">
+                                <option value="m1">Impressa</option>
+                                <option value="m2">DVD</option>
+                                <option value="m3">CD</option>
+                                <option value="m4">Online</option>
+                                <option value="m5">Outro</option>
+                              </select>
+                        </div>
+
+						<div class="container-cadastro-form-btn">
+							<input class="cadastro-livro-form-btn" type="submit" name="salvar" value="Salvar">
+							<input class="cadastro-livro-form-btn" type="reset" name="limpar" value="Limpar">
+						</div>
+					</form>
+					
+				</div>
+				<img src="../imagens/images_livro/img.png" width="500" height="500" class="margin-left-50" />
+			</div>
+		</div>
+	</body>
+
+	
+	<footer>
+
+	</footer>
+	</html>
+
