@@ -1,0 +1,55 @@
+<%- include('../menus/menu_admin.html'); %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Autor</title>
+    <link rel="stylesheet" href="../style.css"/>		
+	  
+</head>
+<body>
+
+
+
+<div class="container"> 
+    <div class="container-cadastro-autor"> <!-- estilo da página de cadastro -->
+		<div class="wrap-cadastro-autor"> <!-- estilo do formulário de cadastro-->
+
+			<form class="cadastro-form" action="/atualizarAutor" method="post">
+				<legend class="title-cadastro-form">Atualize um Autor</legend><br>
+
+				<div class="wrap-input margin-top-35 margin-bottom-35">
+				<label for="id">ID</label>
+					<input class="input-form-cadastro" type="text" name="idautores" value="<%= autores[0].idautores %>" id="idautores" readonly="readonly" autocomplete="off"/>
+					
+				</div>
+
+                <div class="wrap-input margin-top-35 margin-bottom-35">
+				<label for="nomeautor">Nome</label>
+				<input class="input-form-cadastro" type="text" name="nomeautor" value= "<%= autores[0].nomeautor %>" id="nomeautor" size="30">
+			
+				</div>
+
+				<div class="wrap-input margin-top-35 margin-bottom-35">
+				<label for="nacionalidade">Nacionalidade</label>
+				<input class="input-form-cadastro" type="text" name="nacionalidade" value= "<%= autores[0].nacionalidade %>" id="nacionalidade" size="20">
+				
+				</div>
+			
+				<div class="container-cadastro-form-btn">
+					<input class="cadastro-autor-form-btn" type="submit" name="salvar" value="Salvar">
+					<input class="cadastro-autor-form-btn" type="reset" name="limpar" value="Limpar">
+				</div>
+
+			</form>
+		</div>
+    <img src="autor/images_autor/img6.png" width="500" height="500" class="margin-left-50" />
+	</div>
+</div>
+
+<footer>
+
+</footer>
+</html>
