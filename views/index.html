@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+    
+            
+    <div class="container"> 
+<div class="title-search"> Biblioteca do IFRS Campus Restinga </div>
+
+        <div class="container-login"> <!-- estilo da página de login -->
+			
+			<div class="wrap-container-login">
+            <div class="wrap-login"> <!-- estilo do formulário de login-->
+                <form action="/login" method="post">
+                    <span class="title-login-form">
+                        Faça Login
+                    </span>
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <input class="input-form" type="text" name="usuario" id="usuario" autocomplete="off"/>
+                    <span class="focus-input-form" data-placeholder="Usuário"></span>
+                    </div>
+
+                    <div class="wrap-input margin-bottom-35">
+                        <input class="input-form" type="password" name="senha" id="senha" />
+                        <span class="focus-input-form" data-placeholder="Senha"></span>
+                        </div>     
+					
+
+                    <div class="container-login-form-btn">
+                        <button class="login-form-btn">Login</button>
+                    </div>
+
+
+
+
+                </form>
+            </div> <!-- fim do estilo do formulário de login-->
+			
+            </div>
+			 <img src="imagens/images_aluno/img2.png" width="400" height="400" class="margin-left-50" />
+        </div>
+    </div>
+
+</body>
+<script>
+    let inputs = document.getElementsByClassName('input-form');
+    for (let input of inputs) {
+        input.addEventListener("blur", function() {
+            if(input.value.trim() != ""){
+                input.classList.add("has-val");
+            } else {
+                input.classList.remove("has-val");
+            }
+        });
+    }
+</script>
+</html>
