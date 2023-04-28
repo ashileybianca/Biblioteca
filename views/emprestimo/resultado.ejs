@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Biblioteca</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+			<p>Dados do Empréstimo</p>
+			<ul>
+          <li>Usuário: <%= param.getUsuario()%></li>
+          <li>Obra Retirada: <%= param.getObraRetirada()%></li>
+          <li>Data Empréstimo: <%= param.getDataRetirada()%></li>
+          <li>Data p/ Devolução: <%= param.getPrazoDevolucao()%></li>
+      </ul>
+
+      <div id="rodape">
+        <p class="totais">
+          <%= msg%>
+        </p>
+    <a href="/inicio">Voltar ao Início</a>
+    <a href="/emprestimos">Consultar Empréstimos</a>
+      </div>
+
+			
+  </body>
+</html>

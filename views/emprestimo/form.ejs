@@ -1,0 +1,59 @@
+<%- include('../menus/menu_admin.html'); %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Empréstimo</title>
+    <link rel="stylesheet" href="../style.css"/>    
+</head>
+<body>
+
+
+    <div class="container"> 
+    <div class="container-emprestimo"> <!-- estilo da página de cadastro -->
+        <div class="wrap-emprestimo"> <!-- estilo do formulário de cadastro-->    
+            <form class="cadastro-form" action="/atualizarEmprestimo" method="post">
+                <legend class="title-cadastro-form">Cadastre um Empréstimo</legend>
+
+                <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <label for="usuario">Usuário(CPF)</label>
+                    <input class="input-form-cadastro" type="text" name="usuario" value="<%= emprestimos[0].usuario %>" id="usuario" size="15">
+                                  
+                </div>
+
+                <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <label for="obraretirada">Obra Retirada</label>
+                    <input class="input-form-cadastro" type="text" name="obraretirada" value="<%= emprestimos[0].obraretirada %>" id="obraretirada"  autocomplete="off"/>
+                   
+                </div>   
+
+                <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <label for="dataretirada">Data da Retirada</label>
+                    <input class="input-form-cadastro" type="date" name="dataretirada" value="<%= emprestimos[0].dataretirada %>" id="dataretirada"  autocomplete="off"/>
+                    
+                </div>   
+                
+                <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <label for="dataretirada">Prazo de Deolução</label>
+                    <input class="input-form-cadastro" type="date" name="prazodevolucao" value="<%= emprestimos[0].prazodevolucao %>" id="prazodevolucao" autocomplete="off"/>
+                    
+                </div>
+
+                <div class="container-cadastro-form-btn">
+                    <input class="emprestimo-form-btn" type="submit" name="salvar" value="Salvar">
+                    <input class="emprestimo-form-btn" type="reset" name="limpar" value="Limpar">
+                </div>
+            </form>
+        </div>
+        <img src="../imagens/images_emprestimo/img5.png" width="500" height="500" class="margin-left-50" />
+    </div>
+</div>
+    
+</body>
+
+<footer>
+
+</footer>
+</html>
