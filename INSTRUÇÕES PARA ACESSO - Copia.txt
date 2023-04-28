@@ -1,0 +1,38 @@
+INSTRUÇÕES
+
+Olá, 
+
+Assim como o Pergamum, só o administrador pode cadastrar usuários no site, por isso não há link para cadastrar-se na página de login.
+
+Possuímos 6 perfis cadastrados em nosso banco de dados que permitem que você acesse o sistema.
+
+
+
+Perfil de Administrador
+* Este perfil permite cadastrar mais perfis, livros, empréstimos e autores.
+
+Usuário: 12345
+Senha: 54321
+
+
+Perfil de Usuário 
+* Este perfil permite a visualização dos livros e do histórico de empréstimos de um livro, assim, o usuário poderá saber se o livro está locado.
+
+- Possuímos 5 perfis de usuário:
+
+Usuário: 10160119
+Senha: 10160119
+
+Usuário: 10160204
+Senha: 10160204
+
+Usuário: 10160108
+Senha: 10160108
+
+Usuário: 10160102
+Senha: 10160102
+
+Usuário: 10160097
+Senha: 10160097
+
+Importante: Caso algum dado seja digitado errado o banco irá cair. O sistema de login não foi desenvolvido plenamente.
