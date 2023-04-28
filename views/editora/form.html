@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Editora</title>
+    <link rel="stylesheet" href="../style.css"/>	
+		
+
+</head>
+<body>
+<div class="logo">
+	<a href="/inicio"><img src="../imagens/ifrsicone.png" width="110" height="30" class="d" alt="" margin="15"></a>
+</div>
+<nav>
+	<ul>
+	
+		<li><a href="/alunos">Alunos</a></li>
+		<li><a href="/livros">Livros</a></li>
+		<li><a href="/emprestimos">Empréstimos</a></li>
+		<li><a href="/editoras">Editoras</a></li>
+		<li><a href="/autores">Autores</a></li>
+		<li><a href="/sair">Sair</a></li>
+	
+	</ul>  
+</nav>
+	
+		<div class="container"> 
+			<div class="container-cadastro-editora"> <!-- estilo da página de cadastro -->
+				<div class="wrap-cadastro-editora"> <!-- estilo do formulário de cadastro-->
+
+						<form class="cadastro-form" action="/salvarEditora" method="post">
+							<legend class="title-cadastro-form">Cadastre uma Editora</legend><br>
+								
+							<div class="wrap-input margin-top-35 margin-bottom-35">
+							<input class="input-form-cadastro" type="text" name="cnpj" id="cnpj" size="15" required>
+							<span class="focus-input-form-cadastro" data-placeholder="CNPJ"></span>								
+							</div>
+
+					
+							<div class="wrap-input margin-top-35 margin-bottom-35">
+							<input class="input-form-cadastro" type="text" name="razaosocial" id="razaosocial" size="30" required>
+							<span class="focus-input-form-cadastro" data-placeholder="Razão Social"></span>		
+							</div>
+
+							<div class="wrap-input margin-top-35 margin-bottom-35">
+							<input class="input-form-cadastro" type="text" name="telefoneeditora" id="telefoneeditora" size="30">
+							<span class="focus-input-form-cadastro" data-placeholder="Telefone"></span>	
+							</div>
+
+							<div class="wrap-input margin-top-35 margin-bottom-35">
+							<input class="input-form-cadastro" type="text" name="emaileditora" id="emaileditora" size="30">
+							<span class="focus-input-form-cadastro" data-placeholder="Email"></span>	
+							</div>							
+						
+							<div class="container-cadastro-form-btn">
+								<input class="cadastro-editora-form-btn" type="submit" name="salvar" value="Salvar">
+								<input class="cadastro-editora-form-btn" type="reset" name="limpar" value="Limpar">
+							</div>
+						</form>
+				</div>
+        <img src="../imagens/images_editora/img4.png" width="500" height="500" class="margin-left-50" />
+			</div>
+		</div>
+</body>
+
+	<script>
+		let inputs = document.getElementsByClassName('input-form-cadastro');
+		for (let input of inputs) {
+			input.addEventListener("blur", function() {
+				if(input.value.trim() != ""){
+					input.classList.add("has-val");
+				} else {
+					input.classList.remove("has-val");
+				}
+			});
+		}
+</script>
+	
+	<footer>
+
+	</footer>
+</html>
+

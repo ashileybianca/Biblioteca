@@ -1,0 +1,64 @@
+<%- include('../menus/menu_admin.html'); %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Editora</title>
+    <link rel="stylesheet" href="../style.css"/>	
+		
+
+</head>
+<body>
+
+	
+		<div class="container"> 
+			<div class="container-cadastro-editora"> <!-- estilo da página de cadastro -->
+				<div class="wrap-cadastro-editora"> <!-- estilo do formulário de cadastro-->
+
+						<form class="cadastro-form" action="/atualizarEditora" method="post">
+							<legend class="title-cadastro-form">Atualize uma Editora</legend><br>
+								
+							<div class="wrap-input margin-top-35 margin-bottom-35">
+							<label for="cnpj">CNPJ<label>
+							<input class="input-form-cadastro" type="text" name="cnpj" id="cnpj" value="<%= editoras[0].cnpj %>" readonly="readonly" size="15">
+													
+							</div>
+
+					
+							<div class="wrap-input margin-top-35 margin-bottom-35">
+							<label for="razaosocial">Razão Social<label>
+							<input class="input-form-cadastro" type="text" name="razaosocial" value="<%= editoras[0].razaosocial %>" id="razaosocial" size="30">
+								
+							</div>
+
+							<div class="wrap-input margin-top-35 margin-bottom-35">
+							<label for="telefoneeditora">Telefone<label>
+							<input class="input-form-cadastro" type="text" name="telefoneeditora" value="<%= editoras[0].telefoneeditora %>" id="telefoneeditora" size="30">
+							
+							</div>
+
+							<div class="wrap-input margin-top-35 margin-bottom-35">
+							<label for="emaileditora">E-mail<label>
+							<input class="input-form-cadastro" type="text" name="emaileditora" value="<%= editoras[0].emaileditora %>" id="emaileditora" size="30">
+							
+							</div>							
+						
+							<div class="container-cadastro-form-btn">
+								<input class="cadastro-editora-form-btn" type="submit" name="salvar" value="Salvar">
+								<input class="cadastro-editora-form-btn" type="reset" name="limpar" value="Limpar">
+							</div>
+						</form>
+				</div>
+        <img src="../imagens/images_editora/img4.png" width="500" height="500" class="margin-left-50" />
+			</div>
+		</div>
+</body>
+
+
+	
+	<footer>
+
+	</footer>
+</html>

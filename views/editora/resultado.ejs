@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Biblioteca</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+			<p>Dados da Editora</p>
+			<ul>
+          <li>CNPJ: <%= param.getCnpj()%></li>
+          <li>Razão Social: <%= param.getRazaoSocial()%></li>
+          <li>Telefone: <%= param.getTelefoneEditora()%></li>
+          <li>Email: <%= param.getEmailEditora()%></li>
+      </ul>
+
+
+
+      <div id="rodape">
+        <p class="totais">
+          <%= msg%>
+        </p>
+      <a href="/inicio">Voltar ao Início</a>
+      <a href="/editoras">Consultar Editoras</a>
+      </div>
+			
+  </body>
+</html>
