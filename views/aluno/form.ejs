@@ -1,0 +1,93 @@
+<%- include('../menus/menu_admin.html'); %>
+<html>
+	<head>
+		<title>Organizações Tabajara</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../style.css"/>
+	</head>
+	<body>
+	
+
+		<div class="container1"> 
+			<div class="container-cadastro"> <!-- estilo da página de cadastro -->
+				<div class="wrap-cadastro"> <!-- estilo do formulário de cadastro-->
+
+		<form action="/atualizarAluno" method="post">
+			<legend class="title-cadastro-form">Atualize um Aluno</legend><br>
+
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+			<label for="nome">Nome:</label><br>
+			<input  class="input-form-cadastro"  type="text" name="nome" id="nome" value="<%= alunos[0].nome %>">
+			<span class="focus-input-form-cadastro"></span>	
+		</div>
+
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="cpf">CPF:</label><br>
+			<input class="input-form-cadastro" type="text" name="cpf" id="cpf" value="<%= alunos[0].cpf %>" size="15" readonly="readonly">
+		</div>
+
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="senha">Senha:</label><br>
+			<input class="input-form-cadastro" type="text" name="senha" id="senha" value="<%= alunos[0].senha %>" size="15" readonly="readonly">
+		</div>
+
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="tipo">Tipo de Usuário:</label><br>
+			<input class="input-form-cadastro" type="text" name="tipo" id="tipo" value="<%= alunos[0].tipo %>" size="15" readonly="readonly">
+		</div>
+
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="rg">RG:</label><br>
+			<input class="input-form-cadastro"  type="text" name="rg" id="rg" value="<%= alunos[0].rg %>" size="15" readonly="readonly">
+		</div>
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+			<label for="telefonealuno">Telefone:</label><br>
+			<input class="input-form-cadastro"  type="text" name="telefonealuno" id="telefonealuno" value="<%= alunos[0].telefonealuno %>" size="20">
+		</div>
+
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+			<label for="emailaluno">E-mail:</label><br>
+            <textarea class="input-form-cadastro"  name="emailaluno" id="emailaluno" cols="100" rows="3" value="<%= alunos[0].emailaluno %>"> </textarea>
+		</div>
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="curso">Curso:</label><br>
+			<input class="input-form-cadastro" type="text" name="curso" id="curso" value="<%= alunos[0].curso %>" size="15">
+		</div>
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="intcurso">Integralização:</label><br>
+			<input  class="input-form-cadastro" type="text" name="intcurso" id="intcurso" value="<%= alunos[0].intcurso %>" size="15">
+		</div>
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="fincurso">Finalização do curso:</label><br>
+			<input  class="input-form-cadastro" type="text" name="fincurso" id="fincurso" value="<%= alunos[0].fincurso %>" size="15">
+		</div>
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="estado">Estado:</label><br>
+			<input class="input-form-cadastro"  type="text" name="estado" id="estado" value="<%= alunos[0].estado %>" size="15">
+		</div>
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="cidade">Cidade:</label><br>
+			<input class="input-form-cadastro"  type="text" name="cidade" id="cidade" value="<%= alunos[0].cidade %>" size="15">
+		</div>
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="bairro">Bairro:</label><br>
+			<input class="input-form-cadastro"  type="text" name="bairro" id="bairro" value="<%= alunos[0].bairro %>" size="15">
+		</div>
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="logradouro">Logradouro:</label><br>
+			<input class="input-form-cadastro"  type="text" name="logradouro" id="logradouro" value="<%= alunos[0].logradouro %>" size="15">
+		</div>
+		<div class="wrap-input margin-top-35 margin-bottom-35">
+            <label for="numerocasa">Número da casa:</label><br>
+			<input class="input-form-cadastro"  type="text" name="numerocasa" id="numerocasa" value="<%= alunos[0].numerocasa %>" size="15">
+		</div>
+		<div class="container-cadastro-form-btn">
+			<input class="cadastro-form-btn" type="submit" name="salvar" value="Salvar">
+			<input class="cadastro-form-btn1" type="reset" name="limpar" value="Limpar">
+		</div>
+		</form>
+	</div>
+	<img src="../imagens/images_aluno/img2.png" width="500" height="500" class="margin-left-50" />
+</div></div>
+	</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+    
+		<div class="logo">
+			<a href="/inicio"><img src="../imagens/ifrsicone.png" width="110" height="30" class="d" alt="" margin="15"></a>
+	
+		</div>
+    <nav>
+        <ul>
+            <li><a href="/alunos">Alunos</a></li>
+            <li><a href="/livros">Livros</a></li>
+            <li><a href="/emprestimos">Empréstimos</a></li>
+            <li><a href="/editoras">Editoras</a></li>
+            <li><a href="/autores">Autores</a></li>
+            <li><a href="/sair">Sair</a></li>
+        </ul>  
+    </nav>
+    
+    <div class="container1">   
+        <div class="container-cadastro"> <!-- estilo da página de cadastro -->
+            <div class="wrap-cadastro">
+
+                <form class="cadastro-form" action="/salvarAluno" method="post">
+                    <legend class="title-cadastro-form">Cadastre um Aluno</legend><br>
+
+                    <p>* Atenção ao efetuar um cadastro:</p>
+                    <br>
+                    <p>Tipo: pode ser 1 ou 2.</p>
+                    <br>
+                    <p>1 para Administrador;</p>
+                    <p>2 para Usuário.</p>
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <input class="input-form-cadastro" type="text" name="nome" id="nome" required>
+                    <span class="focus-input-form-cadastro" data-placeholder="Nome"></span><br>
+                    </div>
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35">                    
+                    <input class="input-form-cadastro" type="text" name="cpf" id="cpf" required>
+                    <span class="focus-input-form-cadastro" data-placeholder="CPF"></span>
+                    </div>
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <input class="input-form-cadastro" type="text" name="senha" id="senha" required>
+                    <span class="focus-input-form-cadastro" data-placeholder="Senha"></span><br>
+                    </div>
+
+                    
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <p><input class="input-form-cadastro" type="number" name="tipo" id="tipo" required>
+                    <span class="focus-input-form-cadastro" data-placeholder="Tipo"></span></p>
+                    </div>
+
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <input class="input-form-cadastro" type="text" name="rg" id="rg">
+                    <span class="focus-input-form-cadastro" data-placeholder="RG"></span>    
+                    </div>
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <input class="input-form-cadastro" type="telefonealuno" name="telefonealuno" id="telefonealuno">
+                    <span class="focus-input-form-cadastro" data-placeholder="Telefone"></span>     
+                    </div>
+ 
+ 
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <input class="input-form-cadastro" type="email" name="emailaluno" id="emailaluno">
+                    <span class="focus-input-form-cadastro" data-placeholder="Email"></span>
+                    </div>
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <input class="input-form-cadastro" type="text" name="curso" id="curso">
+                    <span class="focus-input-form-cadastro" data-placeholder="Curso"></span>
+                    </div>
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35" id="inline">
+                    <label for="intcurso">Início de curso</label>
+                    <input class="input-form-cadastro" type="date" name="intcurso" id="intcurso">
+                    </div>   
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35" id="inline">
+                        <label for="fincurso">Término de curso</label>
+                        <input class="input-form-cadastro" type="date" name="fincurso" id="fincurso">
+                    </div>   
+
+                    <div class="wrap-input margin-top-35 margin-bottom-35">
+                    <label for="estado">Estado</label><br>
+                        <select class="select-form-cadastro" name="estado" id="estado" data-placeholder="Estado">
+                            <option value="1">Acre (AC)</option>
+                            <option value="2">Alagoas (AL)</option>
+                            <option value="3">Amapá (AP)</option>
+                            <option value="4">Amazonas (AM)</option>
+                            <option value="5" >Bahia (BA)</option>
+                            <option value="6">Ceará (CE)</option>
+                            <option value="7">Distrito Federal (DF)</option>
+                            <option value="8" >Espírito Santo (ES)</option>
+                            <option value="9">Goiás (GO)</option>
+                            <option value="10">Maranhão (MA)</option>
+                            <option value="11" >Mato Grosso (MT)</option>
+                            <option value="12">Mato Grosso do Sul (MS)</option>
+                            <option value="13">Minas Gerais (MG)</option>
+                            <option value="14" >Pará (PA)</option>
+                            <option value="15">Paraíba (PB)</option>
+                            <option value="16">Paraná (PR)</option>
+                            <option value="17" >Pernambuco (PE)</option>
+                            <option value="18">Piauí (PI)</option>
+                            <option value="19">Rio de Janeiro (RJ)</option>
+                            <option value="20" >Rio Grande do Norte (RN)</option>
+                            <option value="21">Rio Grande do Sul (RS)</option>
+                            <option value="22">Rondônia (RO)</option>
+                            <option value="23" >Roraima (RR)</option>
+                            <option value="24">Santa Catarina (SC)</option>
+                            <option value="25">São Paulo (SP)</option>
+                            <option value="26" >Sergipe (SE)</option>
+                            <option value="27">Tocantins (TO)</option>
+                          </select>
+                        </div>
+
+                        <div class="wrap-input margin-top-35 margin-bottom-35">
+                            <input class="input-form-cadastro" type="text" name="cidade" id="cidade" autocomplete="off"/>
+                            <span class="focus-input-form-cadastro" data-placeholder="Cidade"></span>
+                        </div>
+ 
+                        <div class="wrap-input margin-top-35 margin-bottom-35">
+                            <input class="input-form-cadastro" type="text" name="bairro" id="bairro" autocomplete="off"/>
+                            <span class="focus-input-form-cadastro" data-placeholder="Bairro"></span>
+                        </div>
+ 
+                        <div class="wrap-input margin-top-35 margin-bottom-35">
+                            <input class="input-form-cadastro" type="text" name="logradouro" id="logradouro" autocomplete="off"/>
+                            <span class="focus-input-form-cadastro" data-placeholder="Logradouro"></span>
+                        </div>
+                       
+                        <div class="wrap-input margin-top-35 margin-bottom-35">
+                            <input class="input-form-cadastro" type="text" name="numerocasa" id="numerocasa" autocomplete="off"/>
+                            <span class="focus-input-form-cadastro" data-placeholder="Número"></span>
+                        </div>
+ 
+                        <div class="container-cadastro-form-btn">
+                            <input class="cadastro-form-btn" type="submit" name="salvar" value="Salvar">
+                            <input class="cadastro-form-btn1" type="reset" name="limpar" value="Limpar">
+                        </div>
+                </form>
+            </div>
+            <img src="../imagens/images_aluno/img2.png" width="500" height="500" class="margin-left-50" />
+        </div>
+    </div>
+
+</body>
+
+<script>
+    let inputs = document.getElementsByClassName('input-form-cadastro');
+    for (let input of inputs) {
+        input.addEventListener("blur", function() {
+            if(input.value.trim() != ""){
+                input.classList.add("has-val");
+            } else {
+                input.classList.remove("has-val");
+            }
+        });
+    }
+</script>
+ 
+
+<footer>
+
+</footer>
+</html>
+

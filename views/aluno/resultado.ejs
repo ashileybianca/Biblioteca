@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Biblioteca</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+      <p>Dados do Aluno</p>
+      <ul>
+        <li>Nome: <%= param.getNome()%></li>
+        <li>CPF: <%= param.getCpf()%></li>
+        <li>Senha: <%= param.getSenha()%></li>
+        <li>Tipo: <%= param.getTipo()%></li>
+        <li>RG: <%= param.getRg()%></li>
+        <li>Telefone: <%= param.getTelefoneAluno()%></li>
+        <li>E-mail: <%= param.getEmailAluno()%></li>
+        <li>Curso: <%= param.getCurso()%></li>
+        <li>Integralização Curso: <%= param.getIntCurso()%></li>
+        <li>Prev. Finalização Curso: <%= param.getFinCurso()%></li>
+        <li>Estado: <%= param.getEstado()%></li>
+        <li>Cidade: <%= param.getCidade()%></li>
+        <li>Bairro: <%= param.getBairro()%></li>
+        <li>Logradouro: <%= param.getLogradouro()%></li>
+        <li>N°: <%= param.getNumCasa()%></li>
+      </ul>
+      
+ 
+      <div id="rodape">
+        <p class="totais">
+          <%= msg%>
+        </p>
+        <a href="/alunos">Consultar Alunos</a>
+        <a href="/inicio">Voltar ao Início</a>
+      </div>
+
+     
+      
+  </body>
+</html>

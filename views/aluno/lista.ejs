@@ -1,0 +1,80 @@
+<%- include('../menus/menu_admin.html'); %>
+<html>
+    <head>
+        <title>Biblioteca</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../style.css"/>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="title-search">Lista de Alunos</div>
+        <br><br>
+            <div class="nav-guide">
+            <nav class="navbar bg-light">
+            <div class="container-fluid">
+            <form class="d-flex" action="/filtrarAluno" method="post">
+                   
+                
+                <input   class="form-control me-2"  type="text" name="nome" id="nome" size="50" placeholder="Busque um nome (use % como caracter coringa)"><br>
+                <input  class="btn btn-outline-success"  type="submit" name="filtrar" value="Filtrar">
+               
+            </form>
+        </div>
+    </nav>
+    </div>
+    <br>
+           
+        </form>
+        <div class="btn-acao-container-1">
+	
+        <a href="/formAluno">Novo Aluno</a><br>
+        <a href="/inicio">Voltar para Tela Principal</a>&nbsp;</div>
+		<form action="/gerenciarAluno" method="post">
+
+        <table  class="table table-hover" border="1">
+            <tr>
+                <th>Seleção</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Senha</th>
+                <th>Tipo</th>
+                <th>RG</th>
+                <th>Telefone</th>
+                <th>E-mail</th>
+                <th>Curso</th>
+                <th>Integralização Curso</th>
+                <th>Prev. Finalização Curso</th>
+                <th>Estado</th>
+                <th>Cidade</th>
+                <th>Bairro</th>
+                <th>Logradouro</th>
+                <th>N°</th>
+            </tr>
+            <% alunos.forEach((al, index) => { %>
+            <tr><td>
+                <input type="radio" name="cpf" value="<%= al.cpf %>"></td>
+                <td><%= al.nome %></td>
+                <td><%= al.cpf %></td>
+                <td><%= al.senha %></td>
+                <td><%= al.tipo %></td>
+                <td><%= al.rg %></td>
+                <td><%= al.telefonealuno %></td>
+                <td><%= al.emailaluno %></td>
+                <td><%= al.curso %></td>
+                <td><%= al.intcurso %></td>
+                <td><%= al.fincurso %></td>
+                <td><%= al.estado %></td>
+                <td><%= al.cidade %></td>
+                <td><%= al.bairro %></td>
+                <td><%= al.logradouro %></td>
+                <td><%= al.numerocasa %></td>
+            </tr>
+            <% }) %>
+        </table>
+        <div class="btn-acao-container">
+        <input class="btn-acao" type="submit" name="acao" value="Excluir">
+        <input class="btn-acao"type="submit" name="acao" value="Atualizar">
+        </div>
+    </body>
+</html>
